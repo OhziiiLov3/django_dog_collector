@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import date
+# Import User Model 
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -37,6 +39,8 @@ class Dog(models.Model):
     image = models.ImageField(null=True, blank=True)
     # # m:m relationship
     toys = models.ManyToManyField(Toy)
+    # Add user fk
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['name']

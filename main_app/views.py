@@ -138,4 +138,7 @@ def add_photo(request,dog_id):
             print(e)
     return redirect('dogs_show', dog_id=dog_id)
 
+def login_view(request):
+    render('registration/login.html')
+
 
