@@ -23,4 +23,5 @@ urlpatterns = [
     path('dogs/<int:dog_id>/remove_toy/<int:toy_id>/',views.remove_toy, name='remove_toy'),
     # Log in 
      path('login/', views.login_view, name="login"),
+     path('accounts/signup/', views.signup, name='signup'),
 ]
